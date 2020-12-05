@@ -6,7 +6,7 @@ from torchvision import transforms
 from .nets import DSFDNet
 from .box_utils import nms_
 
-PATH_WEIGHT = './detectors/dsfd/weights/dsfd_vgg_0.880.pth'
+PATH_WEIGHT = '/content/gdrive/MyDrive/Models/dsfd_vgg_0.880.pth'
 img_mean = np.array([104., 117., 123.])[:, np.newaxis, np.newaxis].astype('float32')
 
 
