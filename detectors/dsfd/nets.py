@@ -26,7 +26,7 @@ class FEM(nn.Module):
             nn.ReLU(inplace=True),
             nn.Conv2d(inter_planes1, inter_planes1, kernel_size=3, stride=1, padding=3, dilation=3)
         )
-
+    @staticmethod
     def forward(self, x):
         x1 = self.branch1(x)
         x2 = self.branch2(x)
