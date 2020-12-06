@@ -138,7 +138,7 @@ class Detect(Function):
         self.conf_thresh = conf_thresh
         self.variance = variance
         self.nms_top_k = nms_top_k
-
+    @staticmethod
     def forward(self, loc_data, conf_data, prior_data):
 
         num = loc_data.size(0)
@@ -194,7 +194,7 @@ class PriorBox(object):
             self.min_sizes = [16, 32, 64, 128, 256, 512]
         self.steps = steps
         self.clip = clip
-
+    @staticmethod
     def forward(self):
         mean = []
         for k, fmap in enumerate(self.feature_maps):
